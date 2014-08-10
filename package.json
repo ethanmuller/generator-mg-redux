@@ -1,7 +1,7 @@
 {
   "name": "generator-gulp-mg",
   "version": "0.0.0",
-  "description": "Yeoman generator",
+  "description": "A generator for developing static sites. Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "someuser/generator-gulp-mg",
