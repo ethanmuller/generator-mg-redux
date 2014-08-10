@@ -48,11 +48,6 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
     this.directory('lib', 'lib');
     this.directory('tasks', 'tasks');
     this.directory('src', 'src');
-  },
-
-  projectfiles: function () {
-    // this.copy('editorconfig', '.editorconfig');
-    // this.copy('jshintrc', '.jshintrc');
   }
 });
 
