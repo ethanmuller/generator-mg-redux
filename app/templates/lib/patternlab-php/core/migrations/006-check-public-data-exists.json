@@ -1,0 +1,5 @@
+{
+	"sourcePath": "",
+	"destinationPath": "../../build/data",
+	"checkType": "dirExists"
+}

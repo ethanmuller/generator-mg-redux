@@ -1,0 +1,6 @@
+.DS_Store
+public/*
+source/*
+latest-change.txt
+*-ck.js
+*.sass-cache/

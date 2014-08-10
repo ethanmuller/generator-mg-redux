@@ -1,0 +1,5 @@
+{
+	"sourcePath": "",
+	"destinationPath": "../../build/styleguide",
+	"checkType": "dirExists"
+}
