@@ -1,18 +1,24 @@
 # generator-gulp-mg
 
-A generator for developing static sites featuring Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.
+A Yeoman generator for developing static sites featuring Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.
 
 ## Installation/Usage
 
-```
-# install the generator
-npm install -g generator-gulp-mg
+Install the generator:
 
-# generate project in current directory
+```
+npm install -g generator-gulp-mg
+```
+
+Generate project in current directory:
+
+```
 yo gulp-mg
 ```
 
 **The rest of this file is documentation for generated projects.**
+
+---
 
 ## Requirements
 
