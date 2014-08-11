@@ -2,7 +2,7 @@
 
 A generator for developing static sites featuring Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.
 
-## Requirements
+## Requirements for generated projects
 
 - Gulp (`npm install -g gulp`)
 - Bower (`npm install -g bower`)
@@ -12,6 +12,8 @@ A generator for developing static sites featuring Gulp, Pattern Lab, Sass, Coffe
 
 - `npm install`
 - `bower install`
+
+*Yeoman does this part for you upon generation.*
 
 ## Usage
 
