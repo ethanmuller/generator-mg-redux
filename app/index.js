@@ -2,7 +2,7 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
-var yosay = require('yosay');
+var cowsay = require('cowsay');
 var chalk = require('chalk');
 
 
@@ -20,12 +20,23 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
   askFor: function () {
     var done = this.async();
 
-    // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous gulp-mg generator!'));
+    // Because yosay is SO mainstream
+    this.log(chalk.green("\n                    //  \n\
+             ______||__ \n\
+            '----------'\n\
+ Let's      |          |\n\
+ make      \\|   •‿•    |/\n\
+ websites!  |          |\n\
+             \\        / \n\
+              |      |  \n\
+              |      | \n\
+              |      |  \n\
+               '----'   \n"));
 
     var prompts = [{
       name: 'projectName',
-      message: 'What would you like to call this project?'
+      message: 'What would you like to call this project?',
+      default: 'new-project'
     },
     {
       type: 'confirm',
@@ -43,18 +54,18 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
 
   app: function (answers) {
     var answers = this.answers;
-    this.log('includePatternLab: ', answers.includePatternLab);
+    this.log(answers);
 
     this.copy('README.md', 'README.md');
     this.copy('bower.json', 'bower.json');
     this.copy('error-handler.coffee', 'error-handler.coffee');
-    this.copy('package.json', 'package.json');
 
     this.mkdir('lib');
 
     this.directory('tasks', 'tasks');
     this.directory('src', 'src');
 
+    this.template('package.template.json', 'package.json', answers);
     this.template('gulpfile.template.coffee', 'gulpfile.coffee', answers);
     this.template('watch-task.template.coffee', 'tasks/watch.coffee', answers);
 
