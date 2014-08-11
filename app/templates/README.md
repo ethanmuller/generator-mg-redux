@@ -1,3 +1,21 @@
+## Installation/Usage
+
+Install the generator:
+
+```
+npm install -g generator-gulp-mg
+```
+
+Generate project in current directory:
+
+```
+yo gulp-mg
+```
+
+**The rest of this file is documentation for generated projects.**
+
+---
+
 ## Requirements
 
 - Gulp (`npm install -g gulp`)
@@ -25,7 +43,17 @@ gulp build
 
 The rest of the tasks live in `tasks/`, split up by file.
 
-**All your stuff will be processed into `build/`.**
+```
+ ____________________________________ 
+/ All your stuff will be mooved into \
+\ `build/`                           /
+ ------------------------------------ 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
 
 ### Errors
 
@@ -39,7 +67,19 @@ gulp              # Errors will stop the build
 gulp --fatal=off  # Errors will not stop the build
 ```
 
-**Protip:** `alias g='gulp --fatal=off'` for smooth development. :sunglasses:
+```
+ ____________________________ 
+/          Protip:           \
+| alias g='gulp --fatal=off' |
+| for udderly effortless     |
+\ development.               /
+ ---------------------------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
 
 ## Important Directories/Files
 
