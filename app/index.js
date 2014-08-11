@@ -21,26 +21,12 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
     var done = this.async();
 
     // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous GulpMg generator!'));
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-
-      done();
-    }.bind(this));
+    this.log(yosay('Welcome to the marvelous gulp-mg generator!'));
   },
 
   app: function () {
     this.copy('README.md', 'README.md');
     this.copy('bower.json', 'bower.json');
-    this.copy('config.coffee', 'config.coffee');
     this.copy('error-handler.coffee', 'error-handler.coffee');
     this.copy('gulpfile.coffee', 'gulpfile.coffee');
     this.copy('package.json', 'package.json');
