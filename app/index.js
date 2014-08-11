@@ -7,13 +7,11 @@ var chalk = require('chalk');
 
 
 var GulpMgGenerator = yeoman.generators.Base.extend({
-  constructior: function() {
+  initializing: function () {
     this.argument('projectName', {
       optional: true, defaults: 'gnarly-project'
     });
-  },
 
-  init: function () {
     this.pkg = require('../package.json');
 
     this.on('end', function () {
@@ -23,7 +21,7 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
     });
   },
 
-  askFor: function () {
+  prompting: function () {
     var done = this.async();
 
     // Because yosay is SO mainstream
