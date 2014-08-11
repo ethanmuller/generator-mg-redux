@@ -60,10 +60,10 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
     var answers = this.answers;
 
     this.copy('README.md', 'README.md');
-    this.copy('error-handler.coffee', 'error-handler.coffee');
     this.copy('.gitignore', '.gitignore');
 
     this.mkdir('lib');
+    this.copy('error-handler.coffee', 'lib/error-handler.coffee');
 
     this.directory('tasks', 'tasks');
     this.directory('src', 'src');

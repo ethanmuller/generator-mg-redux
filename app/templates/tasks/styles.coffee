@@ -1,6 +1,6 @@
 module.exports = (gulp, cfg, env) ->
   plumber = require 'gulp-plumber'
-  errorHandler = require '../error-handler'
+  errorHandler = require '../lib/error-handler'
   sass = require 'gulp-sass'
   minifyCSS = require 'gulp-minify-css'
   gulpif = require 'gulp-if'

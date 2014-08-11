@@ -91,5 +91,5 @@ src/coffee/    - All coffee files in here will be concatenated into js/all.js in
 src/vendor/    - External libraries that aren't in bower. They'll be concatenated with bower files
 build/         - Processed files go here. You could zip this up and deploy it.
 tasks/         - Gulp tasks are defined in here
-lib/           - Non-node dependenices
+lib/           - Non-npm dependenices
 ```

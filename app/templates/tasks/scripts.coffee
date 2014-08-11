@@ -4,7 +4,7 @@ module.exports = (gulp, cfg, env) ->
   uglify = require "gulp-uglify"
   sourcemaps = require "gulp-sourcemaps"
   gulpif = require "gulp-if"
-  errorHandler = require '../error-handler'
+  errorHandler = require '../lib/error-handler'
   plumber = require 'gulp-plumber'
 
   gulp.task "scripts", ['clean-scripts'], ->
