@@ -1,13 +1,12 @@
-#gulp-init
+#gulp-mg
 
-Very basic Gulp starter project. Coffee, SCSS, and a server with live reload.
+A generator for developing static sites featuring Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.
 
 ## Requirements
 
-- Git, obviously
 - Gulp (`npm install -g gulp`)
 - Bower (`npm install -g bower`)
-- PHP if you're on Windows. If you're on a Mac, you already have it
+- If you're on Windows, PHP. If you're on a Mac, you already have PHP. If you're on Linux, you probably know whether or not you have PHP installed.
 
 ## Setup
 
@@ -16,7 +15,7 @@ Very basic Gulp starter project. Coffee, SCSS, and a server with live reload.
 
 ## Usage
 
-To build & watch:
+To build, watch, and start a server:
 
 ```
 gulp
@@ -36,13 +35,12 @@ The rest of the tasks live in `tasks/`, split up by file.
 
 By default, plugin errors (such as errors with Sass compilation) will cause
 Gulp to halt. Errors and warnings are fatal. If you want to keep Gulp running,
-use the `--fatal=off` flag. This makes development much smoother.
+use the `--fatal=off` flag. This is useful if you are watching files and you
+don't want to have to manually start gulp again.
 
 ```
-gulp                  # defaults to fatal=error
-gulp --fatal=error
-gulp --fatal=warning
-gulp --fatal=off      # no errors should kill the build
+gulp              # Errors will stop the build
+gulp --fatal=off  # Errors will not stop the build
 ```
 
 **Protip:** `alias g='gulp --fatal=off'` for smooth development. :sunglasses:
@@ -50,11 +48,12 @@ gulp --fatal=off      # no errors should kill the build
 ## Important Directories/Files
 
 ```
-gulpfile.coffee   - Gulp configuration
-config.coffee     - Object that is passed to all tasks. Contains common things like file paths.
-src/              - Stuff in this directory gets moved or processed, like SCSS or CoffeeScript
-src/vendor        - Concatenated with Bower files
-tasks/            - Gulp tasks are defined in here
-
-build/            - Processed files go here. You could zip this up and deploy it.
+src/           - Stuff in this directory gets moved or processed, like SCSS or CoffeeScript
+src/assets/    - These files are moved straight into the build directory without being processed
+src/scss/      - Scss files
+src/coffee/    - All coffee files in here will be concatenated into js/all.js in your build directory
+src/vendor/    - External libraries that aren't in bower. They'll be concatenated with bower files
+build/         - Processed files go here. You could zip this up and deploy it.
+tasks/         - Gulp tasks are defined in here
+lib/           - Non-node dependenices
 ```
