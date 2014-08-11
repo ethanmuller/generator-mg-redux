@@ -7,6 +7,12 @@ var chalk = require('chalk');
 
 
 var GulpMgGenerator = yeoman.generators.Base.extend({
+  constructior: function() {
+    this.argument('projectName', {
+      optional: true, defaults: 'gnarly-project'
+    });
+  },
+
   init: function () {
     this.pkg = require('../package.json');
 
@@ -21,27 +27,27 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
     var done = this.async();
 
     // Because yosay is SO mainstream
-    this.log(chalk.green("\n                    //  \n\
-             ______||__ \n\
+    this.log(chalk.green("\n                    //\n\
+             ______||__\n\
             '----------'\n\
+            |          |\n\
  Let's      |          |\n\
  make      \\|   •‿•    |/\n\
  websites!  |          |\n\
-             \\        / \n\
-              |      |  \n\
-              |      | \n\
-              |      |  \n\
-               '----'   \n"));
+             \\        /\n\
+              |      |\n\
+              |      |\n\
+               '----'\n"));
 
     var prompts = [{
       name: 'projectName',
       message: 'What would you like to call this project?',
-      default: 'new-project'
+      default: this.projectName
     },
     {
       type: 'confirm',
       name: 'includePatternLab',
-      message: 'Would you like to include Pattern Lab?',
+      message: 'Would you like to include Pattern Lab? (http://patternlab.io)',
       default: true
     }];
 
