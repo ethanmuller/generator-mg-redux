@@ -3,7 +3,20 @@ _ = require "lodash"
 runSequence = require "run-sequence"
 requireDir = require "require-dir"
 
-config = require "./config.coffee"
+config =
+  paths:
+    dest: 'build/'
+
+    assets: 'src/assets/'
+    patterns: 'src/pattern-lab/**/*'
+
+    scriptsIn: 'src/coffee/'
+    stylesIn: 'src/scss/'
+    vendorIn: 'src/vendor/**/*.js'
+
+    scriptsOut: 'build/js/'
+    stylesOut: 'build/css/'
+    vendorOut: 'build/vendor/'
 
 # Load all tasks
 tasks = requireDir "tasks/"
