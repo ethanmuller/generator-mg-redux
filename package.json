@@ -1,6 +1,6 @@
 {
   "name": "generator-gulp-mg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A generator for developing static sites. Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.",
   "license": "MIT",
   "main": "app/index.js",
