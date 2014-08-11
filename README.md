@@ -1,8 +1,20 @@
-#gulp-mg
+# generator-gulp-mg
 
 A generator for developing static sites featuring Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.
 
-## Requirements for generated projects
+## Installation/Usage
+
+```
+# install the generator
+npm install -g generator-gulp-mg
+
+# generate project in current directory
+yo gulp-mg
+```
+
+**The rest of this file is documentation for generated projects.**
+
+## Requirements
 
 - Gulp (`npm install -g gulp`)
 - Bower (`npm install -g bower`)
@@ -12,8 +24,6 @@ A generator for developing static sites featuring Gulp, Pattern Lab, Sass, Coffe
 
 - `npm install`
 - `bower install`
-
-*Yeoman does this part for you upon generation.*
 
 ## Usage
 

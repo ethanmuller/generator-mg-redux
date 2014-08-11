@@ -1,7 +1,3 @@
-#gulp-mg
-
-A generator for developing static sites featuring Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.
-
 ## Requirements
 
 - Gulp (`npm install -g gulp`)
