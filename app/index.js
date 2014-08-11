@@ -61,6 +61,7 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
 
     this.copy('README.md', 'README.md');
     this.copy('error-handler.coffee', 'error-handler.coffee');
+    this.copy('.gitignore', '.gitignore');
 
     this.mkdir('lib');
 
