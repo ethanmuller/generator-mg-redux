@@ -1,47 +1,60 @@
-# generator-gulp-mg [![Build Status](https://secure.travis-ci.org/someuser/generator-gulp-mg.png?branch=master)](https://travis-ci.org/someuser/generator-gulp-mg)
+#gulp-init
 
-> [Yeoman](http://yeoman.io) generator
+Very basic Gulp starter project. Coffee, SCSS, and a server with live reload.
 
+## Requirements
 
-## Getting Started
+- Git, obviously
+- Gulp (`npm install -g gulp`)
+- Bower (`npm install -g bower`)
+- PHP if you're on Windows. If you're on a Mac, you already have it
 
-### What is Yeoman?
+## Setup
 
-Trick question. It's not a thing. It's this guy:
+- `npm install`
+- `bower install`
 
-![](http://i.imgur.com/JHaAlBJ.png)
+## Usage
 
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
+To build & watch:
 
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
-
-```bash
-$ npm install -g yo
+```
+gulp
 ```
 
-### Yeoman Generators
+For a one-off build:
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-gulp-mg from npm, run:
-
-```bash
-$ npm install -g generator-gulp-mg
+```
+gulp build
 ```
 
-Finally, initiate the generator:
+The rest of the tasks live in `tasks/`, split up by file.
 
-```bash
-$ yo gulp-mg
+**All your stuff will be processed into `build/`.**
+
+### Errors
+
+By default, plugin errors (such as errors with Sass compilation) will cause
+Gulp to halt. Errors and warnings are fatal. If you want to keep Gulp running,
+use the `--fatal=off` flag. This makes development much smoother.
+
+```
+gulp                  # defaults to fatal=error
+gulp --fatal=error
+gulp --fatal=warning
+gulp --fatal=off      # no errors should kill the build
 ```
 
-### Getting To Know Yeoman
+**Protip:** `alias g='gulp --fatal=off'` for smooth development. :sunglasses:
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+## Important Directories/Files
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+```
+gulpfile.coffee   - Gulp configuration
+config.coffee     - Object that is passed to all tasks. Contains common things like file paths.
+src/              - Stuff in this directory gets moved or processed, like SCSS or CoffeeScript
+src/vendor        - Concatenated with Bower files
+tasks/            - Gulp tasks are defined in here
 
-
-## License
-
-MIT
+build/            - Processed files go here. You could zip this up and deploy it.
+```
