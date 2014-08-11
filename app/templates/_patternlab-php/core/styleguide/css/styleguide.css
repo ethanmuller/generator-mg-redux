@@ -469,14 +469,18 @@ span.sg-pattern-state:before {
   font-size: 70%;
   font-weight: normal;
   padding: 1em 0;
-  border-bottom: 1px solid gray; }
+  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
   .sg-pattern-head a {
     display: block;
     color: gray;
+    color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
     cursor: pointer; }
     .sg-pattern-head a:hover {
-      color: #222222; }
+      color: #222222;
+      color: rgba(0, 0, 0, 0.75);
+    }
 
 .sg-view-container {
   -moz-box-sizing: border-box;

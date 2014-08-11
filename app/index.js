@@ -54,10 +54,8 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
 
   app: function (answers) {
     var answers = this.answers;
-    this.log(answers);
 
     this.copy('README.md', 'README.md');
-    this.copy('bower.json', 'bower.json');
     this.copy('error-handler.coffee', 'error-handler.coffee');
 
     this.mkdir('lib');
@@ -65,6 +63,7 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
     this.directory('tasks', 'tasks');
     this.directory('src', 'src');
 
+    this.template('bower.template.json', 'bower.json', answers);
     this.template('package.template.json', 'package.json', answers);
     this.template('gulpfile.template.coffee', 'gulpfile.coffee', answers);
     this.template('watch-task.template.coffee', 'tasks/watch.coffee', answers);
@@ -79,7 +78,7 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
       // Copy default patterns
       this.directory('_pattern-lab-patterns', 'src/pattern-lab');
     } else {
-      this.copy('_index.html', 'src/assets/index.html');
+      this.template('index.template.html', 'src/assets/index.html', answers);
     }
   }
 });
