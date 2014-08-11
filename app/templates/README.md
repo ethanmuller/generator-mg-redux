@@ -3,7 +3,7 @@
 Install the generator:
 
 ```
-n$lightpm install -g generator-mg-redux
+npm install -g generator-mg-redux
 ```
 
 Generate project in current directory:
