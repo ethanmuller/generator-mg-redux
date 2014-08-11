@@ -1,7 +1,8 @@
 module.exports = (gulp, cfg, env) ->
-  connect = require 'gulp-connect'
+  webserver = require 'gulp-webserver'
 
   gulp.task 'server', ->
-    connect.server
-      root: cfg.paths.dest
-      livereload: true
+    gulp.src('build/')
+      .pipe webserver
+        livereload: true
+        open: true

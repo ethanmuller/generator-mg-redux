@@ -2,7 +2,6 @@ module.exports = (gulp, cfg, env) ->
   exec = require('child_process').exec
   ncp = require('ncp').ncp
   fs = require 'fs'
-  connect = require 'gulp-connect'
 
   fileExists = (file) ->
     try
@@ -22,6 +21,4 @@ module.exports = (gulp, cfg, env) ->
       ncp 'lib/patternlab-php/core/styleguide', 'build/styleguide'
 
     # Run pattern lab to generate patterns
-    exec 'php lib/patternlab-php/core/builder.php -gp', ->
-      gulp.src('build/**/*')
-        .pipe(connect.reload())
+    exec 'php lib/patternlab-php/core/builder.php -gp'

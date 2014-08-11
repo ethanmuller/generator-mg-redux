@@ -1,6 +1,5 @@
 module.exports = (gulp, cfg, env) ->
   coffee = require "gulp-coffee"
-  connect = require 'gulp-connect'
   concat = require "gulp-concat"
   uglify = require "gulp-uglify"
   sourcemaps = require "gulp-sourcemaps"
@@ -17,4 +16,3 @@ module.exports = (gulp, cfg, env) ->
       .pipe concat("all.js")
       .pipe gulpif((env is 'production'), uglify())
       .pipe gulp.dest(cfg.paths.scriptsOut)
-      .pipe connect.reload()
