@@ -7,7 +7,7 @@ module.exports =
 
     scriptsIn: 'src/coffee/'
     stylesIn: 'src/scss/'
-    vendorIn: 'src/vendor/**/*'
+    vendorIn: 'src/vendor/**/*.js'
 
     scriptsOut: 'build/js/'
     stylesOut: 'build/css/'
