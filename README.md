@@ -1,4 +1,4 @@
-# generator-gulp-mg
+# generator-mg-redux
 
 A Yeoman generator for developing static sites featuring Gulp, Pattern Lab, Sass, CoffeeScript, and an auto-reloading server.
 
@@ -7,13 +7,13 @@ A Yeoman generator for developing static sites featuring Gulp, Pattern Lab, Sass
 Install the generator:
 
 ```
-npm install -g generator-gulp-mg
+npm install -g generator-mg-redux
 ```
 
 Generate project in current directory:
 
 ```
-yo gulp-mg
+yo mg-redux
 ```
 
 **The rest of this file is documentation for generated projects.**

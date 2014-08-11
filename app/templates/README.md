@@ -3,13 +3,13 @@
 Install the generator:
 
 ```
-npm install -g generator-gulp-mg
+n$lightpm install -g generator-mg-redux
 ```
 
 Generate project in current directory:
 
 ```
-yo gulp-mg
+yo mg-redux
 ```
 
 **The rest of this file is documentation for generated projects.**
