@@ -8,11 +8,10 @@ config =
     dest: 'build/'
 
     assets: 'src/assets/'
-    patterns: 'src/pattern-lab/**/*'
-
     scriptsIn: 'src/coffee/'
     stylesIn: 'src/scss/'
     vendorIn: 'src/vendor/**/*.js'
+    <%= includePatternLab ? "patterns: 'src/pattern-lab/**/*'" : null %>
 
     scriptsOut: 'build/js/'
     stylesOut: 'build/css/'
@@ -42,7 +41,7 @@ gulp.task "build", (callback) ->
       'vendor'
       'scripts'
       'styles'
-      'pattern-lab'
+      <%= includePatternLab ? "'pattern-lab'" : null %>
     ]
     callback
   )
