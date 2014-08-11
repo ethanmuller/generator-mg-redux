@@ -8,5 +8,5 @@ module.exports = (gulp, cfg, env) ->
     gulp.watch(cfg.paths.patterns, ['pattern-lab'])
 
     # This doesn't seem to be picking up on bower installs.
-    gulp.watch(cfg.paths.vendorIn, ['bower-files'])
+    gulp.watch(cfg.paths.vendorIn, ['vendor'])
 

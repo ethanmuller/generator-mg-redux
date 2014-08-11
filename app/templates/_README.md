@@ -53,6 +53,7 @@ gulp --fatal=off      # no errors should kill the build
 gulpfile.coffee   - Gulp configuration
 config.coffee     - Object that is passed to all tasks. Contains common things like file paths.
 src/              - Stuff in this directory gets moved or processed, like SCSS or CoffeeScript
+src/vendor        - Concatenated with Bower files
 tasks/            - Gulp tasks are defined in here
 
 build/            - Processed files go here. You could zip this up and deploy it.

@@ -5,7 +5,7 @@ module.exports = (gulp, cfg, env) ->
   bowerFiles = require 'main-bower-files'
 
   try
-    gulp.task 'bower-files', ['clean-vendor'], ->
+    gulp.task 'vendor', ['clean-vendor'], ->
       gulp.src(bowerFiles().concat(cfg.paths.vendorIn))
         .pipe(concat('vendor.js'))
         .pipe(gulpif((env is 'production'), uglify()))

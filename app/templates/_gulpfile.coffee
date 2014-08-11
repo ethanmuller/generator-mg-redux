@@ -26,7 +26,7 @@ gulp.task "build", (callback) ->
     'clean'
     'assets'
     [
-      'bower-files'
+      'vendor'
       'scripts'
       'styles'
       'pattern-lab'
