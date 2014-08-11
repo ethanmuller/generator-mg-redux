@@ -38,12 +38,12 @@ var GulpMgGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
-    this.copy('_README.md', 'README.md');
-    this.copy('_bower.json', 'bower.json');
-    this.copy('_config.coffee', 'config.coffee');
-    this.copy('_error-handler.coffee', 'error-handler.coffee');
-    this.copy('_gulpfile.coffee', 'gulpfile.coffee');
-    this.copy('_package.json', 'package.json');
+    this.copy('README.md', 'README.md');
+    this.copy('bower.json', 'bower.json');
+    this.copy('config.coffee', 'config.coffee');
+    this.copy('error-handler.coffee', 'error-handler.coffee');
+    this.copy('gulpfile.coffee', 'gulpfile.coffee');
+    this.copy('package.json', 'package.json');
 
     this.directory('lib', 'lib');
     this.directory('tasks', 'tasks');
