@@ -5,4 +5,5 @@ module.exports = (gulp, cfg, env) ->
     gulp.src('build/')
       .pipe webserver
         livereload: true
+        host: '0.0.0.0'
         open: true
